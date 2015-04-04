@@ -25,16 +25,21 @@ int main()
     while(cin >> s1 >> s2)
     {
         int n, m;
+        
+        if(s1 == "0" && s2 == "0") {
+            cout << "0 (base 2) = 0 (base 2)" << endl;
+            continue;
+        }
 
         // calculate the minimum base for first number.
         n = 1; m = 1;
         for(int i = 0; i < s1.size(); i++) {
-             n = max(n, value(s1[i])) + 1;
+             n = max(n, value(s1[i]) + 1);
         }
 
         // calculate the minimum base for second number.
         for(int i = 0; i < s2.size(); i++) {
-              m = max(m, value(s2[i])) + 1;
+              m = max(m, value(s2[i]) + 1);
         }
 
         // clear the vector after each input.
