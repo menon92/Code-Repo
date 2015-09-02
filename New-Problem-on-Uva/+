@@ -1,0 +1,16 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+struct team {
+  int teamnumber;
+  int problem;
+  int palanty;
+};
+
+int main()
+{
+
+  return 0;
+}
